@@ -7,7 +7,8 @@ import {
   BUTTON_TOGGLE_NAVBAR,
   BUTTON_TOGGLE_NAVBARMINI,
 } from 'src/store/type'
-//import {Dropdown} from 'react-bootstrap'
+
+import asset from 'src/utils/asset'
 
 class DashboardHeader extends Component{
     handleClick(e)
@@ -33,9 +34,9 @@ class DashboardHeader extends Component{
 			<header className="navbar" id="header-navbar">
 				<div className="container">
 					<a href="/" id="logo" className="navbar-brand">
-						<img src="/external/img/logo.png" alt="" className="normal-logo logo-white"/>
-						<img src="/external/img/logo-black.png" alt="" className="normal-logo logo-black"/>
-						<img src="/external/img/logo-small.png" alt="" className="small-logo hidden-xs hidden-sm hidden"/>
+						<img src={asset("/external/img/logo.png")} alt="Logo" className="normal-logo logo-white"/>
+						<img src={asset("/external/img/logo-black.png")} alt="Logo" className="normal-logo logo-black"/>
+						<img src={asset("/external/img/logo-small.png")} alt="Logo" className="small-logo hidden-xs hidden-sm hidden"/>
 					</a>
 					<div className="clearfix">
 						<button onClick={this.handleClick2.bind(this)} className="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
@@ -141,7 +142,7 @@ class DashboardHeaderNavBar extends Component{
                    className={'profile-dropdown dropdown '+ (this.state.profileDD ? 'open' : '' )}
                  >
                    <a href="clickme" role="button" onClick={this.onClickProfileDropdown.bind(this)} className="btn dropdown-toggle" data-toggle="dropdown">
-                     <img src={userDetail.photo} alt=""/>
+                     <img src={asset(userDetail.photo)} alt="User profile" />
                      <span className="hidden-xs">{userDetail.name.substr(0,16)}</span> <b className="caret"></b>
                    </a>
                    <ul className="dropdown-menu ">
@@ -253,7 +254,7 @@ const LiDropdownMessage = (props)=>{
   return(
     <li className="item first-item">
       <a href="clickme" onClick={e=>e}>
-      <img src={obj.pic} alt={'Photos Profile of ' + obj.name} />
+      <img src={asset(obj.pic)} alt={'Photos Profile of ' + obj.name} />
       <span className="content">
       <span className="content-headline">{obj.name}</span>
       <span className="content-text">{obj.teks}</span>

@@ -24,6 +24,7 @@ class Logout extends Component{
     },2000)
   }
   render(){
+    
     return(
       <div>
         <Header title="Logout" />

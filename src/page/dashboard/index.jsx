@@ -30,24 +30,3 @@ export const DashboardLayout = ({component: Component, ...rest}) => {
     )} />
   )
 };
-
-/*
-
-<DashboardSidebar />
-
-<div >
-<DashboardHeader  />
-<DashboardConfig />
-<div id="page-wrapper" className={'container' + (this.props.navSmall ? ' nav-small ' : '') }>
-    <div className="row">
-        <DashboardSidebar />
-        <div id="content-wrapper">
-            { this.props.loadUserinfo ? page : ''}
-        </div>
-        <ModalPage />
-        <ModalPage2 />
-        <DashboardFooter />
-    </div>
-</div>
-</div>
-*/

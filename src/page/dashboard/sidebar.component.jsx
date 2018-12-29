@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import {connect} from 'react-redux'
 import Link from 'src/component/link'
+import asset from 'src/utils/asset'
+
 class DashboardSidebar extends Component{
     render(){
         let userDetail = {...this.props.userDetail};
@@ -14,7 +16,7 @@ class DashboardSidebar extends Component{
                 <section id="col-left" className="col-left-nano">
                 <div id="col-left-inner" className="col-left-nano-content">
                     <div id="user-left-box" className="clearfix hidden-sm hidden-xs">
-                        <img alt="" src={userDetail.photo} />
+                        <img alt="" src={asset(userDetail.photo)} />
                         <div className="user-box">
                             <span className="name"> Welcome<br/> {userDetail.name} </span>
                             <span className="status"> <i className="fa fa-circle"></i> Online </span>
@@ -91,7 +93,7 @@ class LiDropdownSidebar extends Component{
 			  kelasDropdown += 'open';
       }
       let link = '/dashboard/'+this.props.obj.link ;
-      
+
       let option = {
         to:link,
         title:this.props.obj.name,

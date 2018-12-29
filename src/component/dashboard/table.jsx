@@ -21,6 +21,7 @@ const MyTable = (props)=>{
   }
 
   return(
+    <div className="table-responsive">
     <table {...rest}>
       <thead>
         <tr>{table.header}</tr>
@@ -29,6 +30,7 @@ const MyTable = (props)=>{
         {table.body}
       </tbody>
     </table>
+    </div>
   )
 }
 
