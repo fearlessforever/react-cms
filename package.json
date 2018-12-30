@@ -9,6 +9,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-notifications": "^1.4.3",
+    "react-perfect-scrollbar": "^1.4.2",
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
     "react-scripts": "2.1.1",
@@ -31,5 +32,5 @@
     "not op_mini all"
   ],
   "devDependencies": {},
-  "homepage":""
+  "homepage": ""
 }
