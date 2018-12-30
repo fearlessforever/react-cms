@@ -1,15 +1,19 @@
 import React,{Component} from 'react'
-import { Redirect } from 'react-router'
+import { withRouter, Redirect } from 'react-router'
 
-export default class Link extends Component{
+class Link extends Component{
   constructor(){
     super(); this.state={redirect:false}
   }
   handleEventOnClick(e){
     e.preventDefault()
-    this.setState({
-      redirect:e.currentTarget.getAttribute('href')
-    })
+    let {match} = this.props
+    if(match.url !== e.currentTarget.getAttribute('href') ){
+      this.setState({
+        redirect:e.currentTarget.getAttribute('href')
+      })
+    }
+
   }
 
   render(){
@@ -24,3 +28,5 @@ export default class Link extends Component{
     )
   }
 }
+
+export default withRouter(Link)

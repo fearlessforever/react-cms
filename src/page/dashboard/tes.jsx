@@ -20,7 +20,7 @@ class Tes extends Component{
     this.props.dispatch({
       type:UPDATE_SIDEBAR_LIST,
       value:[
-        {iconClassname:'fa fa-dashboard',link:'index.html',name:'Dashboard',itung:28},
+        {iconClassname:'fa fa-dashboard',link:'',name:'Dashboard',itung:28},
         {iconClassname:'fa fa-table',link:'',name:'Sample 1',
           submenu:[
             {link:'sample.html',name:'Sample 2',pesan:'new'},
