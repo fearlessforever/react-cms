@@ -18,6 +18,7 @@ import {
 	UPDATE_MODAL_BODY2,
 	UPDATE_MODAL_SIZE2,
 	UPDATE_SIDEBAR_LIST,
+	UPDATE_MESSAGE_NOTIF,
 } from './type'
 
 const dashBoard = (state={
@@ -88,6 +89,9 @@ const dashBoard = (state={
 	modalSize2:'sm',
 },action)=>{
 	switch(action.type){
+		case UPDATE_MESSAGE_NOTIF:
+			state = {...state ,messageList:action.value };
+			break;
 		case SIDEBAR_CLICKED:
 		state = {...state ,collapsedSidebar:action.value };
 			break;

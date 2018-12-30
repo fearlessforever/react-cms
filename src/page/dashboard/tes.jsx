@@ -27,6 +27,7 @@ class Tes extends Component{
             {link:'sample2.html',name:'Sample 3'},
           ]
         },
+        {iconClassname:'fa fa-weixin',link:'chat',name:'Chat',pesan:{klass:'label-warning',teks:'new'}},
       ]
     })
   }
